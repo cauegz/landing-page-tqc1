@@ -1,0 +1,35 @@
+/* UNIDADE DE MEDIDA PADRÃO: rem */
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    height: 100dvh;
+    width: 100dvw;
+}
+header {
+    position: fixed;
+    height: 6rem;
+    width: 100dvw;
+}
+
+/* CABECALHO */
+
+/* IDENTIDADE DA TURMA */
+
+/* QUEM SOMOS */
+
+/* INTEGRANTES */
+
+/* MURAL */
+
+/* LINHA DO TEMPO */
+
+/* RODAPÉ */

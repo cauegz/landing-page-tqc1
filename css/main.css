@@ -1,35 +1,255 @@
 /* UNIDADE DE MEDIDA PADRÃO: rem */
 
 /* CONFIGURAÇÕES GERAIS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
-}
-section {
-    height: 100dvh;
-    width: 100dvw;
-}
-header {
-    position: fixed;
-    height: 6rem;
-    width: 100dvw;
+    font-family: "Fira Code", monospace;
 }
 
-/* CABECALHO */
+section {
+    height: 100dvh;
+    width: 100%;
+}
+
+/* CABEÇALHO */
+
+#cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 6rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4.5rem;
+
+    background-color: #142D72;
+
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: white;
+}
+
+.logo img {
+    width: 4.5rem;
+}
+
+.logo h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem; 
+    font-weight: 700;
+}
+
+#cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+#cabecalho nav a {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+#cabecalho nav a:hover {
+    color: #ffb326;
+}
+
 
 /* IDENTIDADE DA TURMA */
 
+#identidade-turma {
+    background-color: #142D72;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6rem 9rem 0;
+}
+
+.identidade-conteudo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.identidade-texto h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: #ffb326;
+}
+
+.identidade-texto h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1;
+
+    color: white;
+}
+
+.slogan {
+    margin-top: 1rem;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.1rem;
+
+    color: white;
+}
+
+.botao-time {
+    display: inline-block;
+
+    margin-top: 2.5rem;
+    padding: 0.8rem 1.2rem;
+
+    background-color: #ffb326;
+    color: #142D72;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: 0.7rem;
+
+    transition: 0.3s;
+}
+
+.botao-time:hover {
+    transform: scale(1.05);
+}
+
+.bloco-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 1rem;
+}
+
+.foto-turma {
+    width: 38rem;
+    height: 26rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #438de3;
+
+    border-radius: 2rem;
+
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+.legenda-foto {
+    margin-top: 0.8rem;
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+
+    color: white;
+}
+
+
 /* QUEM SOMOS */
+
+#quem-somos {
+    background-color: #142D72;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6rem 9rem;
+}
+
+.quem-somos-conteudo {
+    width: 100%;
+}
+
+.titulo-quem-somos span {
+    font-family: "Fira Code", monospace;
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: #ffb326;
+}
+
+.titulo-quem-somos h2 {
+    margin-top: 0.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: white;
+}
+
+.linha-titulo {
+    width: 7rem;
+    height: 0.25rem;
+
+    margin-top: 1rem;
+
+    background-color: #ffb326;
+}
+
+.texto-quem-somos {
+    width: 38rem;
+
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+.texto-quem-somos p {
+    margin-bottom: 1.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    color: white;
+}
+
 
 /* INTEGRANTES */
 
+
 /* MURAL */
 
+
 /* LINHA DO TEMPO */
+
 
 /* RODAPÉ */

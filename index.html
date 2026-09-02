@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page TQC1</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mural.css">
 </head>
+
 <body>
     <header id="cabecalho">
 
@@ -20,8 +23,52 @@
 
     </section>
     <section id="mural">
-       
-    </section>
+        <div class="mural-header">
+            <p class="frases">FRASES</p>
+            <h2 class="mural">MURAL</h2>
+        </div>
+
+       <div class="mural-container">
+        <!-- PÁGINA 1 (Cards 1 ao 6) -->
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 1...</p><span class="autor">Integrante 1</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 2...</p><span class="autor">Integrante 2</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 3...</p><span class="autor">Integrante 3</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 4...</p><span class="autor">Integrante 4</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 5...</p><span class="autor">Integrante 5</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 6...</p><span class="autor">Integrante 6</span></div>
+
+        <!-- PÁGINA 2 (Cards 7 ao 12) -->
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 7...</p><span class="autor">Integrante 7</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 8...</p><span class="autor">Integrante 8</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 9...</p><span class="autor">Integrante 9</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 10...</p><span class="autor">Integrante 10</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 11...</p><span class="autor">Integrante 11</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 12...</p><span class="autor">Integrante 12</span></div>
+
+        <!-- PÁGINA 3 (Cards 13 ao 18) -->
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 13...</p><span class="autor">Integrante 13</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 14...</p><span class="autor">Integrante 14</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 15...</p><span class="autor">Integrante 15</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 16...</p><span class="autor">Integrante 16</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 17...</p><span class="autor">Integrante 17</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 18...</p><span class="autor">Integrante 18</span></div>
+
+        <!-- PÁGINA 4 (Cards 19 ao 21 - Última página com 3) -->
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 19...</p><span class="autor">Integrante 19</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 20...</p><span class="autor">Integrante 20</span></div>
+        <div class="mural-item"><span class="aspas">"</span><p>Frase 21...</p><span class="autor">Integrante 21</span></div>
+    </div>
+
+    <!-- Navegação -->
+    <div class="mural-navegacao">
+        <button class="seta-btn" id="anterior" aria-label="Anterior">&lt;</button>
+        <span class="contador-paginas" id="contador">1 / 4</span>
+        <button class="seta-btn" id="proximo" aria-label="Próximo">&gt;</button>
+    </div>
+</section>
+
+<script src="js/mural.js" defer></script>
+
     <section id="linha-tempo">
 
     </section>
@@ -29,4 +76,6 @@
 
     </footer>
 </body>
+
+
 </html>

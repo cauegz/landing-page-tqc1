@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+#mural {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+/* Header */
+.mural-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.frases {
+    font-size: 1.7rem;
+    font-family: 'Roboto', sans-serif;
+    color: #FAA926;
+    margin: 0;
+}
+
+.mural {
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1;
+}
+
+.mural-subtitulo {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    line-height: 1.4;
+    opacity: 0.85;
+    max-width: 550px;
+}
+
+/* Grid de Cards */
+.mural-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1100px;
+    margin: 1em auto 0 auto; 
+    min-height: 280px; /* Garante que o container não encolha na última página */
+}
+
+.mural-item {
+    color: #FFFFFF;
+    border-left: 3px solid #FAA926;
+    padding-left: 15px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mural-item .aspas {
+    color: #FAA926;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.mural-item p {
+    display: inline;
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.mural-item .autor {
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+/* Navegação ajustada sem vazar a tela */
+.mural-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto 0 auto;
+    box-sizing: border-box;
+}
+
+.seta-btn {
+    background-color: transparent;
+    border: 2px solid #FAA926;
+    color: #FAA926;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta-btn:hover {
+    background-color: #FAA926;
+    color: #000000;
+}
+
+.contador-paginas {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Regras Desktop */
+@media (min-width: 768px) {
+    .mural-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 50px;
+    }
+}

@@ -1,35 +1,98 @@
 /* UNIDADE DE MEDIDA PADRÃO: rem */
 
 /* CONFIGURAÇÕES GERAIS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
-}
-section {
-    height: 100dvh;
-    width: 100dvw;
-}
-header {
-    position: fixed;
-    height: 6rem;
-    width: 100dvw;
+    font-family: "Fira Code", monospace;
 }
 
-/* CABECALHO */
+section {
+    height: 100dvh;
+    width: 100%;
+}
+
+
+/* CABEÇALHO */
+
+#cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 6rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4.5rem;
+
+    background-color: #142D72;
+
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.logo img {
+    width: 4rem;
+    height: auto;
+    display: block;
+}
+
+.logo h1 {
+    color: white;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+#cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+#cabecalho nav a {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+#cabecalho nav a:hover {
+    color: #ffb326;
+}
 
 /* IDENTIDADE DA TURMA */
 
+
 /* QUEM SOMOS */
+
 
 /* INTEGRANTES */
 
+
 /* MURAL */
 
+
 /* LINHA DO TEMPO */
+
 
 /* RODAPÉ */

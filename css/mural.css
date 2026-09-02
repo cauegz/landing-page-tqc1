@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+.mural-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8%;
+}
+
 .frases {
     font-size: 1.7rem;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     color: #FAA926;
-    margin: 0 8%;
+    margin: 0;
 }
 
 .mural {
@@ -12,14 +18,16 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #FFFFFF;
-    margin-left: 8%;
+    margin: 0;
+    line-height: 1;
 }
 
+/* Regras do Container (Cards) */
 .mural-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 30px;
-    margin: 30px 9.3% 0;
+    grid-template-columns: 1fr; 
+    gap: 25px;
+    margin: 2em 8% 0 8%; 
 }
 
 .mural-item {
@@ -27,7 +35,7 @@
     border-left: 3px solid #FAA926;
     padding-left: 15px;
     position: relative;
-    max-width: 390px;
+    width: 100%;
 }
 
 .mural-item .aspas {
@@ -40,15 +48,71 @@
 .mural-item p {
     display: inline;
     color: #FFFFFF;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    line-height: 1.4;
 }
 
 .mural-item .autor {
     display: block;
-    text-align: right;
+    text-align: center;
     color: #FFFFFF;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-top: 5px;
-    max-width: 150px; 
+}
+
+/* Navegação posicionada abaixo do mural */
+.mural-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha na direita */
+    gap: 15px;
+    margin: 20px 8% 0 8%;
+}
+
+.seta-btn {
+    background-color: transparent;
+    border: 2px solid #FAA926;
+    color: #FAA926;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta-btn:hover {
+    background-color: #FAA926;
+    color: #000000;
+}
+
+.contador-paginas {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Regras para Desktop */
+@media (min-width: 768px) {
+    .mural-header {
+        margin: 0 8% 0 9.3%;
+        max-width: 1100px;
+    }
+
+    .mural-container {
+        grid-template-columns: repeat(2, minmax(380px, 460px));
+        gap: 30px 60px;
+        margin: 1.5em 8% 0 9.3%;
+        max-width: 1100px;
+    }
+
+    /* Mantém a navegação alinhada com o limite dos cards no desktop */
+    .mural-navegacao {
+        margin: 25px 8% 0 9.3%;
+        max-width: 1100px;
+    }
 }

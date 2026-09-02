@@ -1,0 +1,88 @@
+/* QUEM SOMOS */
+
+#quem-somos {
+    min-height: 115dvh;
+    height: auto;
+
+    background-color: #142D72;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8rem 9rem 10rem;
+}
+
+.quem-somos-conteudo {
+    width: 100%;
+}
+
+.titulo-quem-somos span {
+    font-family: "Fira Code", monospace;
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: #ffb326;
+}
+
+.titulo-quem-somos h2 {
+    margin-top: 0.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: white;
+}
+
+.linha-titulo {
+    width: 7rem;
+    height: 0.25rem;
+
+    margin-top: 1rem;
+
+    background-color: #ffb326;
+}
+
+.quem-somos-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+
+    margin-top: 3rem;
+}
+
+.texto-quem-somos {
+    width: 38rem;
+
+    margin-left: 4rem;
+}
+
+.texto-quem-somos p {
+    margin-bottom: 2rem;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    color: white;
+}
+
+.imagem-quem-somos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-quem-somos img {
+    width: 30rem;
+    height: 22rem;
+
+    object-fit: cover;
+
+    border-radius: 1.5rem;
+
+    display: block;
+}

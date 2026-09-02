@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');   
 /* UNIDADE DE MEDIDA PADRÃO: rem */
 
 /* CONFIGURAÇÕES GERAIS */
@@ -29,6 +30,19 @@ header {
 /* INTEGRANTES */
 
 /* MURAL */
+.frase {
+    color: #FAA926;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.mural {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+}
 
 /* LINHA DO TEMPO */
 

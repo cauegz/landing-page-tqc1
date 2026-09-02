@@ -18,8 +18,8 @@
 .mural-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px 40px;
-    margin: 30px 8% 0;
+    gap: 20px 30px;
+    margin: 30px 9.3% 0;
 }
 
 .mural-item {
@@ -27,6 +27,7 @@
     border-left: 3px solid #FAA926;
     padding-left: 15px;
     position: relative;
+    max-width: 390px;
 }
 
 .mural-item .aspas {
@@ -49,4 +50,5 @@
     color: #FFFFFF;
     font-size: 0.85rem;
     margin-top: 5px;
+    max-width: 150px; 
 }

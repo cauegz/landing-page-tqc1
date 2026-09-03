@@ -17,6 +17,7 @@
 
 .linha-tempo-header {
   margin-bottom: 5rem;
+  text-transform: uppercase;
 }
 
 .subtitulo {
@@ -25,7 +26,6 @@
   font-weight: 500;
   letter-spacing: 0.0625rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 .linha-tempo-header h2 {
@@ -50,7 +50,7 @@
 
 .linha-tempo-container {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   align-items: flex-start;
   position: relative;
 }
@@ -102,9 +102,9 @@
 .timeline-card {
   position: absolute;
   top: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   width: 220px;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #ffffff;
   color: #012e73;
   border-radius: 0.5rem;

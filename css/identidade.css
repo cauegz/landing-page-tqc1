@@ -49,6 +49,27 @@
     color: white;
 }
 
+/* Typing effect */
+.slogan.typing {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.slogan.typing::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 6px;
+    background-color: #ffffff;
+    vertical-align: bottom;
+    animation: blink-caret 0.7s steps(1) infinite;
+}
+
+@keyframes blink-caret {
+    50% { opacity: 0; }
+}
+
 .botao-time {
     display: inline-block;
 

@@ -11,6 +11,10 @@
   font-weight: 500;
 }
 
+#linha-tempo {
+  padding-bottom: 60vh !important; 
+}
+
 .linha-tempo-header {
   margin-bottom: 5rem;
   text-transform: uppercase;
@@ -80,6 +84,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .icone-wrapper svg {
@@ -88,17 +94,11 @@
   fill: #faa926;
 }
 
-/*Efeito nos icones*/
-.icone-wrapper {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
 .timeline-item:hover .icone-wrapper {
   transform: scale(1.15);
 }
 
-/*Descrição da timeline*/
+/* Descrição da timeline (Card) */
 .timeline-card {
   position: absolute;
   top: 100%;
@@ -124,22 +124,79 @@
 .timeline-item:hover .timeline-card {
   opacity: 1;
   visibility: visible;
-
   transform: translateX(-50%) translateY(0);
 }
 
 .timeline-card p {
   font-size: 0.75rem;
   line-height: 1.5;
-
   margin-bottom: 0.75rem;
-
   color: #012e73;
 }
 
 .timeline-card span {
   font-size: 0.65rem;
   font-weight: 700;
-
   color: #faa926;
+}
+
+/* Base das Animações via Scroll */
+@keyframes RevelarItem {
+  from { 
+    opacity: 0; 
+    transform: translateY(35px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes EsticarLinha {
+  from { 
+    opacity: 0;
+    clip-path: inset(0 100% 0 0); 
+  }
+  to { 
+    opacity: 1;
+    clip-path: inset(0 0 0 0); 
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  
+  .timeline-item:nth-child(1) { --atraso: calc(0 * 12%); }
+  .timeline-item:nth-child(2) { --atraso: calc(1 * 12%); }
+  .timeline-item:nth-child(3) { --atraso: calc(2 * 12%); }
+  .timeline-item:nth-child(4) { --atraso: calc(3 * 12%); }
+
+  .linha-tempo-header {
+    animation: RevelarItem linear both;
+    animation-timeline: view();
+    animation-range: contain 0% contain 25%;
+  }
+
+  .icone-wrapper {
+    animation-name: RevelarItem;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-range: contain calc(5% + var(--atraso)) contain calc(40% + var(--atraso));
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+  }
+
+  .timeline-item > h3, 
+  .timeline-item > p:not(.timeline-card p) {
+    animation-name: RevelarItem;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-range: contain calc(10% + var(--atraso)) contain calc(45% + var(--atraso));
+  }
+
+  .linha-tempo-container::before {
+    animation-name: EsticarLinha;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-range: contain 5% contain 65%;
+  }
 }

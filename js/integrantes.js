@@ -122,7 +122,7 @@ const integrantes = [
     {
         nome: "Nome 16",
         idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
+        descricao: "Entusiasta de métodos ágeis, Git workflow e integração contínua.",
         github: "https://github.com",
         linkedin: "https://linkedin.com",
         avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro7"
@@ -137,12 +137,15 @@ const integrantes = [
     }
 ];
 
+let currentIndex = 0;
 let currentPosition = 0;
 let isAnimating = false;
 
-const cardsToMove = 2;
-const gap = 16;
 const animationDuration = 750;
+
+function obterCardsPorMovimento() {
+    return window.innerWidth <= 650 ? 1 : 2;
+}
 
 function criarCardIntegrante(integrante) {
     const article = document.createElement("article");
@@ -219,18 +222,6 @@ function obterCards() {
     );
 }
 
-function obterPasso() {
-    const cards = obterCards();
-
-    if (!cards.length) {
-        return 0;
-    }
-
-    const largura = cards[0].getBoundingClientRect().width;
-
-    return largura + gap;
-}
-
 function obterMaxScroll() {
     const track = obterTrack();
     const container = obterContainer();
@@ -240,18 +231,27 @@ function obterMaxScroll() {
         return 0;
     }
 
-    const ultimoCard = cards[cards.length - 1];
+    return Math.max(
+        0,
+        track.scrollWidth - container.clientWidth
+    );
+}
 
-    const trackRect = track.getBoundingClientRect();
-    const ultimoRect = ultimoCard.getBoundingClientRect();
+function obterPosicaoDoCard(index) {
+    const cards = obterCards();
 
-    const finalDoUltimoCard =
-        ultimoRect.right - trackRect.left;
+    if (!cards.length) {
+        return 0;
+    }
 
-    const limite =
-        finalDoUltimoCard - container.clientWidth;
+    const cardIndex = Math.max(
+        0,
+        Math.min(index, cards.length - 1)
+    );
 
-    return Math.max(0, limite);
+    return limitarPosicao(
+        cards[cardIndex].offsetLeft
+    );
 }
 
 function limitarPosicao(posicao) {
@@ -270,8 +270,7 @@ function aplicarPosicao(animar = true) {
         return;
     }
 
-    currentPosition =
-        limitarPosicao(currentPosition);
+    currentPosition = obterPosicaoDoCard(currentIndex);
 
     if (animar) {
         isAnimating = true;
@@ -298,28 +297,26 @@ function moverCarrossel(direcao) {
         return;
     }
 
-    const passo = obterPasso();
+    const cards = obterCards();
 
-    if (!passo) {
+    if (!cards.length) {
         return;
     }
 
-    const limite = obterMaxScroll();
+    const quantidade = obterCardsPorMovimento();
 
     if (direcao === "next") {
-        currentPosition += passo * cardsToMove;
-
-        if (currentPosition >= limite) {
-            currentPosition = limite;
-        }
+        currentIndex = Math.min(
+            currentIndex + quantidade,
+            cards.length - 1
+        );
     }
 
     if (direcao === "prev") {
-        currentPosition -= passo * cardsToMove;
-
-        if (currentPosition <= 0) {
-            currentPosition = 0;
-        }
+        currentIndex = Math.max(
+            currentIndex - quantidade,
+            0
+        );
     }
 
     aplicarPosicao(true);
@@ -335,15 +332,19 @@ function atualizarNavegacao() {
     const limite =
         obterMaxScroll();
 
+    const cards =
+        obterCards();
+
     if (btnPrev) {
         btnPrev.disabled =
             isAnimating ||
-            currentPosition <= 1;
+            currentIndex === 0;
     }
 
     if (btnNext) {
         btnNext.disabled =
             isAnimating ||
+            currentIndex >= cards.length - 1 ||
             currentPosition >= limite - 1;
     }
 }
@@ -363,6 +364,7 @@ function renderizarCarrossel() {
         );
     });
 
+    currentIndex = 0;
     currentPosition = 0;
     isAnimating = false;
 
@@ -372,19 +374,20 @@ function renderizarCarrossel() {
 }
 
 function reajustarCarrossel() {
-    const limite = obterMaxScroll();
-
-    currentPosition =
-        Math.min(
-            currentPosition,
-            limite
-        );
-
     const track = obterTrack();
+    const cards = obterCards();
 
-    if (!track) {
+    if (!track || !cards.length) {
         return;
     }
+
+    currentIndex = Math.min(
+        currentIndex,
+        cards.length - 1
+    );
+
+    currentPosition =
+        obterPosicaoDoCard(currentIndex);
 
     track.style.transition = "none";
 

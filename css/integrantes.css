@@ -1,5 +1,3 @@
-/* INTEGRANTES */
-
 #integrantes {
     --integrantes-bg: #0a3478;
     --integrantes-card: #0d3b84;
@@ -377,13 +375,7 @@
 
 /* RESPONSIVIDADE */
 
-
-/* -----------------------------------------
-   Até 1200px
-   ----------------------------------------- */
-
 @media (max-width: 1200px) {
-
     #integrantes {
         padding: 80px 24px;
     }
@@ -391,18 +383,11 @@
     #integrantes .card-integrante {
         flex-basis: calc((100% - 48px) / 4);
     }
-
 }
 
-
-/* -----------------------------------------
-   Até 900px
-   ----------------------------------------- */
-
 @media (max-width: 900px) {
-
     #integrantes {
-        padding: 75px 20px;
+        padding: 72px 20px;
     }
 
     #integrantes .card-integrante {
@@ -412,78 +397,198 @@
     #integrantes .integrantes-header {
         margin-bottom: 38px;
     }
-
 }
 
-
-/* -----------------------------------------
-   Até 650px
-   ----------------------------------------- */
-
+/* MOBILE */
 @media (max-width: 650px) {
-
     #integrantes {
-        padding: 65px 16px;
+        padding: 58px 14px;
+    }
+
+    #integrantes .integrantes-header {
+        margin-bottom: 28px;
     }
 
     #integrantes .integrantes-header h2 {
-        font-size: 2.25rem;
+        max-width: 100%;
+        font-size: clamp(1.9rem, 9vw, 2.35rem);
+        line-height: 1.08;
     }
 
     #integrantes .integrantes-divider {
-        width: 112px;
+        width: 92px;
         height: 4px;
+        margin-top: 18px;
     }
 
     #integrantes .carousel-wrapper {
-        gap: 10px;
+        position: relative;
+        display: block;
+        width: 100%;
     }
 
-    #integrantes .nav-btn {
-        width: 42px;
-        height: 42px;
+    #integrantes .carousel-track-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 8px 8px 20px;
+    }
 
-        flex-basis: 42px;
+    #integrantes .carousel-track {
+        gap: 12px;
+        width: max-content;
     }
 
     #integrantes .card-integrante {
-        flex-basis: 100%;
-        min-height: 300px;
+        flex: 0 0 calc(100vw - 44px);
+        width: calc(100vw - 44px);
+        min-height: 0;
+        padding: 24px 18px 18px;
     }
 
+    #integrantes .avatar-img {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 14px;
+    }
+
+    #integrantes .descricao {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    #integrantes .card-actions {
+        gap: 8px;
+    }
+
+    #integrantes .nav-btn {
+        position: absolute;
+        top: 50%;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        flex: 0 0 38px;
+        transform: translateY(-50%);
+        background: var(--integrantes-card);
+        z-index: 10;
+    }
+
+    #integrantes #btnPrev {
+        left: -3px;
+    }
+
+    #integrantes #btnNext {
+        right: -3px;
+    }
+
+    #integrantes .nav-btn:hover:not(:disabled) {
+        transform: translateY(-50%) scale(1.04);
+    }
+
+    #integrantes .nav-btn:active:not(:disabled) {
+        transform: translateY(-50%) scale(0.96);
+    }
 }
 
-
-/* -----------------------------------------
-   Até 420px
-   ----------------------------------------- */
-
 @media (max-width: 420px) {
-
     #integrantes {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 52px 10px;
     }
 
     #integrantes .integrantes-label {
-        font-size: 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    #integrantes .integrantes-header {
+        margin-bottom: 24px;
     }
 
     #integrantes .integrantes-header h2 {
-        font-size: 2rem;
+        font-size: clamp(1.75rem, 9vw, 2rem);
+    }
+
+    #integrantes .carousel-track-container {
+        padding: 8px 6px 18px;
+    }
+
+    #integrantes .carousel-track {
+        gap: 10px;
     }
 
     #integrantes .card-integrante {
-        min-height: 290px;
+        flex-basis: calc(100vw - 32px);
+        width: calc(100vw - 32px);
+        padding: 22px 16px 16px;
+        border-radius: 15px;
+    }
 
-        padding: 24px 18px 20px;
+    #integrantes .avatar-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #integrantes .role-badge {
+        font-size: 0.66rem;
+    }
+
+    #integrantes .nome {
+        font-size: 1rem;
+    }
+
+    #integrantes .descricao {
+        font-size: 0.8rem;
     }
 
     #integrantes .nav-btn {
-        width: 38px;
-        height: 38px;
-
-        flex-basis: 38px;
+        width: 34px;
+        height: 34px;
     }
 
+    #integrantes #btnPrev {
+        left: -1px;
+    }
+
+    #integrantes #btnNext {
+        right: -1px;
+    }
+}
+
+@media (max-width: 360px) {
+    #integrantes {
+        padding-inline: 8px;
+    }
+
+    #integrantes .card-integrante {
+        flex-basis: calc(100vw - 28px);
+        width: calc(100vw - 28px);
+        padding-inline: 14px;
+    }
+
+    #integrantes .card-actions {
+        gap: 6px;
+    }
+
+    #integrantes .btn-action {
+        padding-inline: 7px;
+        font-size: 0.66rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #integrantes .card-integrante:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    #integrantes .card-integrante:hover .avatar-img {
+        transform: none;
+        box-shadow: none;
+    }
+
+    #integrantes .btn-action:hover {
+        transform: none;
+        color: var(--integrantes-yellow);
+        background: transparent;
+    }
 }

@@ -13,6 +13,7 @@
 
 .linha-tempo-header {
   margin-bottom: 5rem;
+  text-transform: uppercase;
 }
 
 .subtitulo {
@@ -21,7 +22,6 @@
   font-weight: 500;
   letter-spacing: 0.0625rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 .linha-tempo-header h2 {
@@ -46,7 +46,7 @@
 
 .linha-tempo-container {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   align-items: flex-start;
   position: relative;
 }
@@ -102,31 +102,22 @@
 .timeline-card {
   position: absolute;
   top: 100%;
-  margin-top: 1.5rem;
-
+  margin-top: 1rem;
   width: 220px;
-  padding: 1rem;
-
+  padding: 0.5rem;
   background-color: #ffffff;
   color: #012e73;
-
   border-radius: 0.5rem;
-
   text-align: left;
-
   opacity: 0;
   visibility: hidden;
-
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-
   transition:
     opacity 0.3s ease,
     transform 0.3s ease,
     visibility 0.3s ease;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
   z-index: 10;
 }
 

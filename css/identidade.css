@@ -1,0 +1,225 @@
+/* IDENTIDADE DA TURMA */
+
+#identidade-turma {
+    background-color: #142D72;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6rem 7rem 0;
+}
+
+.identidade-conteudo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2rem;
+}
+
+.identidade-texto {
+    margin-left: 1rem;
+}
+
+.identidade-texto h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: #ffb326;
+}
+
+.identidade-texto h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 8.2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    color: white;
+}
+
+.slogan {
+    margin-top: 1rem;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem;
+
+    color: white;
+}
+
+/* Typing effect */
+.slogan.typing {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.slogan.typing::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 6px;
+    background-color: #ffffff;
+    vertical-align: bottom;
+    animation: blink-caret 0.7s steps(1) infinite;
+}
+
+@keyframes blink-caret {
+    50% { opacity: 0; }
+}
+
+.botao-time {
+    display: inline-block;
+
+    margin-top: 2rem;
+    padding: 0.7rem 1.1rem;
+
+    background-color: #ffb326;
+    color: #142D72;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: 0.7rem;
+
+    transition: 0.3s;
+}
+
+.botao-time:hover {
+    transform: scale(1.05);
+}
+
+.bloco-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+.foto-turma {
+    width: 41rem;
+    height: 31rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #438de3;
+
+    border-radius: 1.5rem;
+
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+.legenda-foto {
+    margin-top: 0.7rem;
+
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem;
+
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1200px) {
+    #identidade-turma {
+        padding: 6rem 4rem 0;
+    }
+
+    .identidade-texto h3 {
+        font-size: 4.4rem;
+    }
+
+    .bloco-foto {
+        margin-left: 3rem;
+    }
+
+    .foto-turma {
+        width: 24rem;
+        height: 17rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #identidade-turma {
+        height: auto;
+        min-height: 100dvh;
+
+        padding: 8rem 3rem 3rem;
+    }
+
+    .identidade-conteudo {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 2.5rem;
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .identidade-texto {
+        margin-left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .identidade-texto h3 {
+        font-size: 3.6rem;
+    }
+
+    .bloco-foto {
+        margin: 0;
+    }
+
+    .foto-turma {
+        width: 100%;
+        max-width: 28rem;
+        height: 16rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #identidade-turma {
+        padding: 7rem 1.5rem 3rem;
+    }
+
+    .identidade-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .identidade-texto h3 {
+        font-size: 2.6rem;
+    }
+
+    .slogan {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+
+    .botao-time {
+        font-size: 0.85rem;
+    }
+
+    .foto-turma {
+        height: 12rem;
+        border-radius: 1rem;
+    }
+
+    .legenda-foto {
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}

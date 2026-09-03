@@ -23,6 +23,24 @@
 <body>
 
     <header id="cabecalho">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <div class="logo">
+            <img src="images/logo/logo-residencia.png" alt="Logo TQC1">
+            <h1>TQC1</h1>
+        </div>
+        <label for="menu-toggle" class="menu-icone" aria-label="Abrir menu de navegação">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <a href="#identidade-turma">Início</a>
+            <a href="#quem-somos">Quem somos</a>
+            <a href="#integrantes">Integrantes</a>
+            <a href="#mural">Mural</a>
+            <a href="#linha-tempo">Trajetória</a>
+        </nav>
 
         <div class="logo">
             <img src="images/logo-residencia.png" alt="Logo TQC1">
@@ -41,19 +59,104 @@
 
     <section id="identidade-turma">
 
-    </section>
-    <section id="quem-somos">
+        <div class="identidade-conteudo">
+
+            <div class="identidade-texto">
+
+                <h2>TQC1</h2>
+                <h3>MANHÃ</h3>
+
+                <p class="slogan">
+                    Códigos que conectam, ideias que transformam.
+                </p>
+
+                <a href="#quem-somos" class="botao-time">
+                    Conheça nosso time →
+                </a>
+
+            </div>
+
+            <div class="bloco-foto">
+
+                <div class="foto-turma">
+                    <span>Foto turma</span>
+                </div>
+
+                <p class="legenda-foto">
+                    Residência Full Stack 5.0 — Turma TQC1
+                </p>
+
+            </div>
+
+        </div>
 
     </section>
+
+    <section id="quem-somos">
+
+        <div class="quem-somos-conteudo">
+
+            <div class="titulo-quem-somos">
+
+                <span>SOBRE NÓS</span>
+
+                <h2>QUEM SOMOS</h2>
+
+                <div class="linha-titulo"></div>
+
+            </div>
+
+            <div class="quem-somos-bloco">
+
+                <div class="texto-quem-somos">
+
+                    <p>
+                        Somos a turma TQC1 da Residência Full Stack 5.0, um programa de formação
+                        presencial voltado ao desenvolvimento de habilidades em tecnologia,
+                        abrangendo conteúdos de back-end, front-end e preparação para o mercado de trabalho.
+                    </p>
+
+                    <p>
+                        A iniciativa é realizada pelo Instituto ELDORADO, em parceria com a Petrobras,
+                        por meio do Programa Petrobras Socioambiental, e possui uma jornada de sete meses
+                        com aulas presenciais e aprendizado baseado na prática.
+                    </p>
+
+                    <p>
+                        Ao longo dessa trajetória, compartilhamos experiências, desafios e conhecimentos,
+                        fortalecendo características que fazem parte da nossa turma, como colaboração,
+                        autonomia, curiosidade, troca de ideias e trabalho em equipe. Atualmente,
+                        seguimos avançando na formação, colocando em prática os conteúdos estudados
+                        e desenvolvendo competências para nossa futura atuação na área de tecnologia.
+                    </p>
+
+                </div>
+
+                <div class="imagem-quem-somos">
+                    <img
+                        src="images/foto-quem-somos.png"
+                        alt="Turma colaborando em atividades de desenvolvimento full stack"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <section id="integrantes">
 
     </section>
+
     <section id="mural">
-       
+
     </section>
+
     <section id="linha-tempo">
 
     </section>
+
     <footer id="rodape">
 
     <div class="rodape-conteudo">
@@ -88,5 +191,10 @@
 </footer>
 
     </footer>
+
+    <script src="js/identidade.js"></script>
+    <script src="js/header.js"></script>
+
 </body>
+
 </html>

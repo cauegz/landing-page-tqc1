@@ -80,6 +80,46 @@ section {
     color: #ffb326;
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.menu-icone {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 1.9rem;
+    height: 1.3rem;
+
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icone span {
+    display: block;
+
+    height: 0.2rem;
+    width: 100%;
+
+    background-color: white;
+    border-radius: 0.2rem;
+
+    transition: 0.3s;
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(1) {
+    transform: translateY(0.55rem) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(3) {
+    transform: translateY(-0.55rem) rotate(-45deg);
+}
+
 /* IDENTIDADE DA TURMA */
 
 
@@ -96,3 +136,73 @@ section {
 
 
 /* RODAPÉ */
+
+@media (max-width: 992px) {
+    #cabecalho {
+        padding: 0 2.5rem;
+    }
+
+    #cabecalho nav {
+        gap: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        padding: 0 1.5rem;
+    }
+
+    .menu-icone {
+        display: flex;
+    }
+
+    #cabecalho nav {
+        position: fixed;
+        top: 6rem;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        background-color: #142D72;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.3s ease;
+
+        z-index: 999;
+    }
+
+    #cabecalho nav a {
+        padding: 1rem 2rem;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #cabecalho .menu-toggle:checked ~ nav {
+        max-height: 20rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #cabecalho {
+        height: 5rem;
+        padding: 0 1.2rem;
+    }
+
+    .logo img {
+        width: 3rem;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    #cabecalho nav {
+        top: 5rem;
+    }
+}

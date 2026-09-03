@@ -96,3 +96,126 @@ section {
 
 
 /* RODAPÉ */
+#rodape {
+    min-height: auto;
+    width: 100%;
+
+    background-color: #0e2358;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 4rem 2rem 2rem;
+}
+
+.rodape-conteudo {
+    width: 100%;
+    max-width: 60rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.rodape-logo img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.rodape-logo h2 {
+    color: white;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.rodape-texto {
+    margin-top: 1rem;
+    max-width: 30rem;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.rodape-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+
+    margin-top: 2rem;
+}
+
+.rodape-nav a {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.rodape-nav a:hover {
+    color: #ffb326;
+}
+
+.rodape-github {
+    margin-top: 1.5rem;
+
+    color: #ffb326;
+    text-decoration: none;
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.rodape-github:hover {
+    text-decoration: underline;
+}
+
+.linha-rodape {
+    width: 100%;
+    max-width: 20rem;
+    height: 0.0625rem;
+
+    margin-top: 2rem;
+
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.rodape-copy {
+    margin-top: 1.5rem;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.75rem;
+}
+
+/* RESPONSIVIDADE RODAPÉ */
+
+@media (max-width: 480px) {
+    #rodape {
+        padding: 3rem 1.2rem 1.5rem;
+    }
+
+    .rodape-nav {
+        gap: 1rem 1.5rem;
+    }
+
+    .rodape-texto {
+        font-size: 0.8rem;
+    }
+}

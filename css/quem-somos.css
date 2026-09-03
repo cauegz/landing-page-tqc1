@@ -18,7 +18,7 @@
 
 .titulo-quem-somos span {
     font-family: "Fira Code", monospace;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
 
     color: #ffb326;
@@ -28,7 +28,7 @@
     margin-top: 0.5rem;
 
     font-family: "Open Sans", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
 
     color: white;
@@ -53,7 +53,7 @@
 }
 
 .texto-quem-somos {
-    width: 38rem;
+    width: 50rem;
 
     margin-left: 4rem;
 }
@@ -62,7 +62,7 @@
     margin-bottom: 2rem;
 
     font-family: "Fira Code", monospace;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 
     line-height: 1.8;
@@ -77,12 +77,89 @@
 }
 
 .imagem-quem-somos img {
-    width: 30rem;
-    height: 22rem;
+    width: 40rem;
+    height: 32rem;
 
     object-fit: cover;
 
     border-radius: 1.5rem;
 
     display: block;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1200px) {
+    #quem-somos {
+        padding: 8rem 5rem 6rem;
+    }
+
+    .texto-quem-somos {
+        width: 30rem;
+        margin-left: 0;
+    }
+
+    .imagem-quem-somos img {
+        width: 22rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #quem-somos {
+        min-height: 100dvh;
+
+        padding: 8rem 3rem 4rem;
+    }
+
+    .quem-somos-bloco {
+        flex-direction: column;
+        gap: 3rem;
+
+        margin-top: 2rem;
+    }
+
+    .texto-quem-somos {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .texto-quem-somos p {
+        text-align: left;
+    }
+
+    .imagem-quem-somos img {
+        width: 100%;
+        max-width: 30rem;
+        height: 16rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #quem-somos {
+        padding: 7rem 1.5rem 3rem;
+    }
+
+    .titulo-quem-somos span {
+        font-size: 1.5rem;
+    }
+
+    .titulo-quem-somos h2 {
+        font-size: 2rem;
+    }
+
+    .linha-titulo {
+        width: 5rem;
+    }
+
+    .texto-quem-somos p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .imagem-quem-somos img {
+        height: 12rem;
+        border-radius: 1rem;
+    }
 }

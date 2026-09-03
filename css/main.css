@@ -2,6 +2,10 @@
 
 /* CONFIGURAÇÕES GERAIS */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -78,6 +82,21 @@ section {
 
 #cabecalho nav a:hover {
     color: #ffb326;
+}
+
+/* Active nav link when section is in view */
+#cabecalho nav a.active {
+    color: #ffb326;
+    font-weight: 700;
+}
+
+#cabecalho nav a.active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ffb326;
+    margin-top: 4px;
+    border-radius: 2px;
 }
 
 .menu-toggle {

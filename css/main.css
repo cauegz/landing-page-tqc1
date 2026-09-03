@@ -97,6 +97,8 @@ section {
     background-color: #ffb326;
     margin-top: 4px;
     border-radius: 2px;
+}
+
 .menu-toggle {
     display: none;
 }

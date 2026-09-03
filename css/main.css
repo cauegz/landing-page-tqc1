@@ -2,6 +2,12 @@
 
 /* CONFIGURAÇÕES GERAIS */
 
+html {
+    scroll-behavior: smooth;
+    /* ensure anchored sections are not hidden behind fixed header */
+    scroll-padding-top: 6rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +86,63 @@ section {
     color: #ffb326;
 }
 
+/* Active nav link when section is in view */
+#cabecalho nav a.active {
+    color: #ffb326;
+    font-weight: 700;
+}
+
+#cabecalho nav a.active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ffb326;
+    margin-top: 4px;
+    border-radius: 2px;
+}
+
+.menu-toggle {
+    /* keep the checkbox operable but visually hidden for accessibility */
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-icone {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 1.9rem;
+    height: 1.3rem;
+
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icone span {
+    display: block;
+
+    height: 0.2rem;
+    width: 100%;
+
+    background-color: white;
+    border-radius: 0.2rem;
+
+    transition: 0.3s;
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(1) {
+    transform: translateY(0.55rem) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-icone span:nth-child(3) {
+    transform: translateY(-0.55rem) rotate(-45deg);
+}
+
 /* IDENTIDADE DA TURMA */
 
 
@@ -96,3 +159,153 @@ section {
 
 
 /* RODAPÉ */
+
+.rodape-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 4.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background-color: #0f234f;
+    color: white;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.rodape-logo img {
+    width: 3.2rem;
+    height: auto;
+    display: block;
+}
+
+.rodape-logo h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffb326;
+}
+
+.rodape-texto {
+    flex: 1 1 40%;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.rodape-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.rodape-nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.rodape-github {
+    background: transparent;
+    color: #ffb326;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.linha-rodape {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 1.25rem 0;
+}
+
+.rodape-copy {
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .rodape-conteudo {
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .rodape-texto {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .rodape-nav {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+
+    .rodape-logo {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape-copy {
+        order: 4;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive menu: show hamburger and collapse nav on small screens */
+@media (max-width: 768px) {
+    .menu-icone {
+        display: flex;
+    }
+
+    #cabecalho nav {
+        position: fixed;
+        top: 6rem; /* below header */
+        left: 0;
+        width: 100%;
+        background-color: #142D72;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        z-index: 999;
+    }
+
+    #cabecalho nav a {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* when checkbox is checked, expand nav */
+    .menu-toggle:checked ~ nav {
+        max-height: 500px;
+    }
+
+    /* adjust header padding to make room for hamburger */
+    #cabecalho {
+        padding: 0 1.2rem;
+    }
+
+    /* make sure the hamburger sits on the right */
+    .menu-icone {
+        margin-left: auto;
+    }
+}

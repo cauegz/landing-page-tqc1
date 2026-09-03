@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       const id = link.getAttribute('href').slice(1);
       setActiveById(id);
+      // close mobile menu if open
+      const toggle = document.getElementById('menu-toggle');
+      if (toggle && toggle.checked && window.matchMedia('(max-width: 768px)').matches) {
+        // uncheck to close menu
+        toggle.checked = false;
+      }
     });
   });
 });

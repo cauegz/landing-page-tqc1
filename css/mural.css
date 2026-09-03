@@ -122,10 +122,36 @@
     font-weight: 500;
 }
 
-/* Regras Desktop */
+@media (max-width: 576px) {
+    .frases {
+        font-size: 1.4rem;
+    }
+    .mural {
+        font-size: 1.8rem;
+    }
+    .mural-subtitulo {
+        font-size: 0.85rem;
+    }
+    .mural-item p {
+        font-size: 1rem;
+    }
+    .mural-navegacao {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
 @media (min-width: 768px) {
     .mural-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 50px;
+    }
+    .mural-navegacao {
+        justify-content: flex-end; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .mural-container {
+        gap: 40px 60px; 
     }
 }

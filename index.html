@@ -8,8 +8,11 @@
     <title>Landing Page TQC1</title>
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/identidade.css">
     <link rel="stylesheet" href="css/quem-somos.css">
+    <link rel="stylesheet" href="css/identidade.css">
+    <link rel="stylesheet" href="css/integrantes.css">
+    <link rel="stylesheet" href="css/mural.css">
+    <link rel="stylesheet" href="css/timeline.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +36,19 @@
             <span></span>
             <span></span>
         </label>
+
+        <nav>
+            <a href="#identidade-turma">Início</a>
+            <a href="#quem-somos">Quem somos</a>
+            <a href="#integrantes">Integrantes</a>
+            <a href="#mural">Mural</a>
+            <a href="#linha-tempo">Trajetória</a>
+        </nav>
+
+        <div class="logo">
+            <img src="images/logo-residencia.png" alt="Logo TQC1">
+            <h1>TQC1</h1>
+        </div>
 
         <nav>
             <a href="#identidade-turma">Início</a>
@@ -134,6 +150,65 @@
 
     <section id="integrantes">
 
+        <div class="integrantes-container">
+
+            <!-- Cabeçalho da seção -->
+            <header class="integrantes-header">
+
+                <span class="integrantes-label">INTEGRANTES</span>
+                <h2>CONHEÇA NOSSO TIME</h2>
+
+                <div class="integrantes-divider"></div>
+            </header>
+
+            <!-- Carrossel -->
+            <div class="carousel-wrapper">
+
+                <!-- Botão anterior -->
+                <button class="nav-btn" id="btnPrev" aria-label="Voltar integrantes" type="button">
+
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Área visível -->
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="carouselTrack"></div>
+                </div>
+
+                <!-- Botão próximo -->
+                <button class="nav-btn" id="btnNext" aria-label="Avançar integrantes" type="button">
+                    
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+
     </section>
 
     <section id="mural">
@@ -179,6 +254,7 @@
 
     </footer>
 
+    <script src="js/integrantes.js"></script>
     <script src="js/identidade.js"></script>
     <script src="js/header.js"></script>
 

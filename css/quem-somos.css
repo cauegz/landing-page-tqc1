@@ -70,40 +70,59 @@
     color: white;
 }
 
-.imagem-quem-somos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.imagem-quem-somos img {
-    width: 40rem;
-    height: 32rem;
-
-    object-fit: cover;
-
-    border-radius: 1.5rem;
+.logo-rfs img {
+    width: 13rem;
+    height: auto;
+    position: relative;
+    left: 4.5rem;
+    object-fit: contain;
 
     display: block;
 }
 
+.logo-parceria-linha {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.logo-parceria img {
+    width: 10rem;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
 /* RESPONSIVIDADE */
 
 @media (max-width: 1200px) {
     #quem-somos {
         padding: 8rem 5rem 6rem;
     }
+}
 
     .texto-quem-somos {
         width: 30rem;
         margin-left: 0;
     }
 
-    .imagem-quem-somos img {
-        width: 22rem;
-        height: 18rem;
-    }
+    .logo-rfs img {
+    width: 10.5rem;
 }
+
+    .logo-parceria img {
+        width: 8.5rem;
+}
+
+    .logo-parceria-linha {
+        gap: 3.5rem;
+}
+
 
 @media (max-width: 992px) {
     #quem-somos {
@@ -111,6 +130,7 @@
 
         padding: 8rem 3rem 4rem;
     }
+}
 
     .quem-somos-bloco {
         flex-direction: column;
@@ -128,11 +148,20 @@
         text-align: left;
     }
 
-    .imagem-quem-somos img {
-        width: 100%;
-        max-width: 30rem;
-        height: 16rem;
-    }
+    .logos-parceria {
+    gap: 3rem;
+}
+
+    .logo-rfs img {
+        width: 9.5rem;
+}
+
+    .logo-parceria img {
+        width: 8rem;
+}
+
+    .logo-parceria-linha {
+        gap: 3rem;
 }
 
 @media (max-width: 480px) {
@@ -158,8 +187,23 @@
         line-height: 1.7;
     }
 
-    .imagem-quem-somos img {
-        height: 12rem;
-        border-radius: 1rem;
+    .logos-parceria {
+    gap: 2.2rem;
+    }
+
+    .logo-rfs img {
+        width: 8rem;
+    }
+
+    .logo-parceria img {
+        width: 6.5rem;
+    }
+
+    .logo-parceria-linha {
+        gap: 2.2rem;
+    }
+
+    .logo-parceria span {
+    font-size: 0.8rem;
     }
 }

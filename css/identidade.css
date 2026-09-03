@@ -33,7 +33,7 @@
 
 .identidade-texto h3 {
     font-family: "Open Sans", sans-serif;
-    font-size: 5.2rem;
+    font-size: 8.2rem;
     font-weight: 700;
     line-height: 1;
 
@@ -44,7 +44,7 @@
     margin-top: 1rem;
 
     font-family: "Fira Code", monospace;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
 
     color: white;
 }
@@ -59,7 +59,7 @@
     color: #142D72;
 
     font-family: "Fira Code", monospace;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 700;
 
     text-decoration: none;
@@ -83,8 +83,8 @@
 }
 
 .foto-turma {
-    width: 31rem;
-    height: 21rem;
+    width: 41rem;
+    height: 31rem;
 
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@
     margin-top: 0.7rem;
 
     font-family: "Fira Code", monospace;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 
     color: white;
 }

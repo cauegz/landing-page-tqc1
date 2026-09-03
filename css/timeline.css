@@ -152,3 +152,72 @@
 
   color: #faa926;
 }
+
+/*  Prevenção de estouro global causado por 100dvw no Reset */
+@media (min-width: 0px) {
+    header,
+    section {
+        /* Sobrescreve o 100dvw para evitar a barra de rolagem horizontal */
+        width: 100% !important; 
+    }
+
+    section {
+        /* Garante que o conteúdo não seja cortado na altura e adiciona respiro nas laterais */
+        height: auto;
+        min-height: 100dvh;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 7rem; /* Compensação da altura do header fixo */
+        overflow-x: hidden; /* Trava de segurança para impedir estouro lateral */
+    }
+
+    /* Ajuste para o primeiro item da linha do tempo não vazar na esquerda */
+    .timeline-item:first-child .timeline-card {
+        left: 0;
+        transform: translateY(-10px);
+    }
+    .timeline-item:first-child:hover .timeline-card {
+        transform: translateY(0);
+    }
+
+    /* Ajuste para o último item da linha do tempo não vazar na direita */
+    .timeline-item:last-child .timeline-card {
+        left: auto;
+        right: 0;
+        transform: translateY(-10px);
+    }
+    .timeline-item:last-child:hover .timeline-card {
+        transform: translateY(0);
+    }
+}
+
+/*  DISPOSITIVOS MÓVEIS (Até 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 4.5rem;
+    }
+
+    section {
+        padding-top: 5.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Reduz a largura do card no celular para se adequar a telas pequenas */
+    .timeline-card {
+        width: 170px;
+        font-size: 0.875rem; /* Ajusta a fonte para caber no card menor */
+    }
+}
+
+/* TABLETS E TELAS MÉDIAS (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .timeline-card {
+        width: 200px;
+    }
+}

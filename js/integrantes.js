@@ -1,141 +1,30 @@
 const integrantes = [
-    {
-        nome: "Nome 1",
-        idade: 23,
-        descricao: "Desenvolvedor Frontend focado em acessibilidade, componentes reutilizáveis e UI moderna.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Nicolas"
-    },
-    {
-        nome: "Nome 2",
-        idade: 25,
-        descricao: "Entusiasta de arquitetura de software, Node.js e integração contínua.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Manoel"
-    },
-    {
-        nome: "Nome 3",
-        idade: 22,
-        descricao: "Especialista em React, TailwindCSS e otimização de performance web.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Oliver"
-    },
-    {
-        nome: "Nome 4",
-        idade: 24,
-        descricao: "Desenvolvedora Full Stack apaixonada por resolução de problemas e UX Design.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Mariana"
-    },
-    {
-        nome: "Nome 5",
-        idade: 21,
-        descricao: "Foco em desenvolvimento backend, bancos de dados SQL e segurança da informação.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Caue"
-    },
-    {
-        nome: "Nome 6",
-        idade: 26,
-        descricao: "Engenheiro de software focado em microsserviços, Docker e testes automatizados.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Viana"
-    },
-    {
-        nome: "Nome 7",
-        idade: 24,
-        descricao: "Desenvolvedor frontend com olhar apurado para animações e interfaces fluidas.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Rodrigo"
-    },
-    {
-        nome: "Nome 8",
-        idade: 23,
-        descricao: "Apaixonado por JavaScript moderno, TypeScript e ecossistema Node.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Miguel"
-    },
-    {
-        nome: "Nome 9",
-        idade: 27,
-        descricao: "Desenvolvedora Full Stack dedicada a criar soluções escaláveis e limpas.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Erica"
-    },
-    {
-        nome: "Nome 10",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro"
-    },
-    {
-        nome: "Nome 11",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro2"
-    },
-    {
-        nome: "Nome 12",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro3"
-    },
-    {
-        nome: "Nome 13",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro4"
-    },
-    {
-        nome: "Nome 14",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro5"
-    },
-    {
-        nome: "Nome 15",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro6"
-    },
-    {
-        nome: "Nome 16",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração contínua.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro7"
-    },
-    {
-        nome: "Nome 17",
-        idade: 22,
-        descricao: "Entusiasta de métodos ágeis, Git workflow e integração de APIs REST.",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com",
-        avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=Pietro8"
-    }
-];
+    ["Álvaro", "Álvaro.jpeg"],
+    ["Andre", "Andre.jpeg"],
+    ["Carlos", "Carlos.jpeg"],
+    ["Érica", "Érica.jpeg"],
+    ["Giulia", "Giulia.jpeg"],
+    ["Joanna", "Joanna.jpeg"],
+    ["Kaue", "Kaue.jpeg"],
+    ["Larissa", "Larissa.jpeg"],
+    ["Leticia", "Leticia.jpeg"],
+    ["Manoel", "Manoel.jpeg"],
+    ["Mariana", "Mariana.jpeg"],
+    ["Miguel", "Miguel.jpeg"],
+    ["Nicolas", "Nicolas.jpeg"],
+    ["Nicolly", "Nicolly.jpeg"],
+    ["Oscar", "Oscar.jpeg"],
+    ["Pietro", "Pietro.jpeg"],
+    ["Rodrigo", "Rodrigo.jpeg"],
+    ["Sebastian", "Sebastian.jpeg"]
+].map(([nome, arquivo], indice) => ({
+    nome,
+    idade: 22 + (indice % 6),
+    descricao: "Integrante da equipe TQC1, colaborando na construção de soluções digitais.",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com",
+    avatar: `images/logo/fotos-integrantes/${encodeURIComponent(arquivo)}`
+}));
 
 let currentIndex = 0;
 let currentPosition = 0;

@@ -106,3 +106,99 @@
 
     color: white;
 }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1200px) {
+    #identidade-turma {
+        padding: 6rem 4rem 0;
+    }
+
+    .identidade-texto h3 {
+        font-size: 4.4rem;
+    }
+
+    .bloco-foto {
+        margin-left: 3rem;
+    }
+
+    .foto-turma {
+        width: 24rem;
+        height: 17rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #identidade-turma {
+        height: auto;
+        min-height: 100dvh;
+
+        padding: 8rem 3rem 3rem;
+    }
+
+    .identidade-conteudo {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 2.5rem;
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .identidade-texto {
+        margin-left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .identidade-texto h3 {
+        font-size: 3.6rem;
+    }
+
+    .bloco-foto {
+        margin: 0;
+    }
+
+    .foto-turma {
+        width: 100%;
+        max-width: 28rem;
+        height: 16rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #identidade-turma {
+        padding: 7rem 1.5rem 3rem;
+    }
+
+    .identidade-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .identidade-texto h3 {
+        font-size: 2.6rem;
+    }
+
+    .slogan {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+
+    .botao-time {
+        font-size: 0.85rem;
+    }
+
+    .foto-turma {
+        height: 12rem;
+        border-radius: 1rem;
+    }
+
+    .legenda-foto {
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
